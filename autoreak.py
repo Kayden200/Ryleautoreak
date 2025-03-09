@@ -1,7 +1,9 @@
 import re
 import requests
-from concurrent.futures import ThreadPoolExecutor
-from time import sleep
+from concurrent.futures 
+import ThreadPoolExecutor
+from time 
+import sleep
 import colorama
 import os
 
@@ -10,13 +12,16 @@ colorama.init()
 def show_credits():
     credits = """
     \033[1;35m===========================================\033[0m
-    \033[1;36mCredits: Joshua Apostol | Explored by Shiki\033[0m
+    \033[1;36mCreated By : Ryle Cohner \033[0m
     \033[1;35m===========================================\033[0m
     """
     print(credits)
 
 def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 def display_logo():
     logo = """
@@ -37,6 +42,7 @@ def countdown(delay):
             print(f"\033[1;37m[DELAY][{icons[i]}][{delay} seconds]", end='\r')
             sleep(0.2)
         delay -= 1
+    print(' ' * 50, end='\r')  # Clear the countdown line
 
 class Machine:
     def __init__(self):
