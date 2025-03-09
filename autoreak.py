@@ -3,6 +3,7 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 from time import sleep
 import colorama
+import os
 
 colorama.init()
 
